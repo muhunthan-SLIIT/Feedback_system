@@ -19,12 +19,23 @@ export default function AdminLayout({
       <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link
-              href="/admin/enterprises"
-              className="text-xl font-bold text-primary"
-            >
-              Feedback Admin
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/"
+                className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Home
+              </Link>
+              <Link
+                href="/admin/enterprises"
+                className="text-xl font-bold text-primary"
+              >
+                Feedback Admin
+              </Link>
+            </div>
             <nav className="flex gap-1">
               {navItems.map((item) => (
                 <Link
